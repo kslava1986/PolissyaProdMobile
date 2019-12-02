@@ -7,8 +7,6 @@
 .externalNativeBuild
 .cxx
 /gradle
-gradle.*
 gradlew.*
 gradlew
 .idea
-settings.gradle

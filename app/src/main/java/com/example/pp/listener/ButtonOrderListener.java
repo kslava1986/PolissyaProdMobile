@@ -1,10 +1,6 @@
 package com.example.pp.listener;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.support.annotation.NonNull;
-import android.support.v4.app.NotificationCompat;
 import android.view.View;
 import android.widget.Toast;
 
@@ -13,6 +9,7 @@ import com.example.pp.rest.NetworkService;
 
 import java.util.List;
 
+import androidx.annotation.NonNull;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

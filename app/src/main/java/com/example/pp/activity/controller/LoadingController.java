@@ -1,5 +1,5 @@
 package com.example.pp.activity.controller;
 
 public interface LoadingController {
-    void loadData();
+    void load();
 }

@@ -53,7 +53,7 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().post(new Runnable() {
             @Override
             public void run() {
-                new LoadControllerImp(getApplicationContext()).loadData();
+                new LoadControllerImp(getApplicationContext()).load();
             }
         });
     }

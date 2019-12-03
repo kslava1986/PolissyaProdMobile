@@ -40,9 +40,11 @@ public class LoadControllerImp implements LoadingController {
     }
 
     @Override
-    public void loadData() {
+    public void load() {
         if(settingService.isExist(SettingConst.FIRST_RUN)){
             createNewSettings();
+            //todo добавить список значений по умолчанию для первой инициализации базы при первом запуске програмы
+            shopsService.saveToBaseData(ShopDefault.SHOPS);
         } else {
 
         }
@@ -72,6 +74,7 @@ public class LoadControllerImp implements LoadingController {
                     @Override
                     public void onFailure(Call<List<Shop>> call, Throwable t) {
                         t.printStackTrace();
+                        //todo убрать, так как при неудачной загрузке данные не должны записываться и обновляться
                         shopsService.saveToBaseData(ShopDefault.SHOPS);
                     }
                 });

@@ -17,19 +17,36 @@ public class SettingServiceImp implements SettingService {
 
     @Override
     public String getValue(String key) {
-        return repository.get(key).getValue();
+        Setting setting = repository.get(key);
+
+        return setting != null ? repository.get(key).getValue() : "";
     }
 
     @Override
     public void setValue(String key, String value) {
-        Setting setting = repository.get(key);
-        setting.setValue(value);
-        repository.update(setting);
+        Setting setting = new Setting(key, value);
+        repository.save(setting);
     }
 
     @Override
     public void delete(String key) {
         Setting setting = repository.get(key);
-        repository.delete(setting);
+        if(setting != null) {
+            repository.delete(setting);
+        }
+    }
+
+    @Override
+    public void updateValue(String key, String value) {
+        Setting setting = repository.get(key);
+        if(setting != null) {
+            setting.setValue(value);
+            repository.update(setting);
+        }
+    }
+
+    @Override
+    public boolean isExist(String key) {
+        return repository.get(key) != null;
     }
 }

@@ -12,13 +12,13 @@ public class SettingContract {
     public final static String KEY = "key";
     public final static String VALUE = "value";
 
-    public static String SQL_CREATE_TABLE_SETTING = "CREATE TABLE "
+    public static String SQL_CREATE_TABLE = "CREATE TABLE "
             + TABLE_NAME + " ("
             + _ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
             + KEY + " TEXT NOT NULL DEFAULT 0, "
             + VALUE + " TEXT NOT NULL DEFAULT 0);";
 
-    public static final String SQL_DROP_TABLE_SETTING = "DROP TABLE IF EXISTS " + TABLE_NAME;
+    public static final String SQL_DROP_TABLE = "DROP TABLE IF EXISTS " + TABLE_NAME;
 
     public static String[] PROJECTION = {
             _ID,

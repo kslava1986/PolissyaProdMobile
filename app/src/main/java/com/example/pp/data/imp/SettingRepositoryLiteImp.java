@@ -48,9 +48,7 @@ public class SettingRepositoryLiteImp implements SettingRepositoryLite {
                 null,
                 null,
                 null,
-                null
-
-        )){
+                null)){
             int idIndex = cursor.getColumnIndex(_ID);
             int keyIndex = cursor.getColumnIndex(KEY);
             int valueIndex = cursor.getColumnIndex(VALUE);

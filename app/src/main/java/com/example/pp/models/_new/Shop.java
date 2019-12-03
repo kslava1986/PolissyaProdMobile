@@ -2,35 +2,31 @@ package com.example.pp.models._new;
 
 import com.example.pp.models.AbstractBaseEntity;
 
+import java.util.Objects;
+
 public class Shop extends AbstractBaseEntity {
     //logo
     private String name;
-    private String address;
-    private int numberAdrress;
+    private Address address;
     private int tel;
-    private long startWorkTime;
-    private long endWorkTime;
+    private WorkTime workTime;
 
     public Shop() {
     }
 
-    public Shop(Integer id, String name, String address, int numberAdrress, int tel, long startWorkTime, long endWorkTime) {
+    public Shop(String name, Address address, int tel, WorkTime workTime) {
+        this.name = name;
+        this.address = address;
+        this.tel = tel;
+        this.workTime = workTime;
+    }
+
+    public Shop(Integer id, String name, Address address, int tel, WorkTime workTime) {
         super(id);
         this.name = name;
         this.address = address;
-        this.numberAdrress = numberAdrress;
         this.tel = tel;
-        this.startWorkTime = startWorkTime;
-        this.endWorkTime = endWorkTime;
-    }
-
-    public Shop(String name, String address, int numberAdrress, int tel, long startWorkTime, long endWorkTime) {
-        this.name = name;
-        this.address = address;
-        this.numberAdrress = numberAdrress;
-        this.tel = tel;
-        this.startWorkTime = startWorkTime;
-        this.endWorkTime = endWorkTime;
+        this.workTime = workTime;
     }
 
     public String getName() {
@@ -41,22 +37,6 @@ public class Shop extends AbstractBaseEntity {
         this.name = name;
     }
 
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public int getNumberAdrress() {
-        return numberAdrress;
-    }
-
-    public void setNumberAdrress(int numberAdrress) {
-        this.numberAdrress = numberAdrress;
-    }
-
     public int getTel() {
         return tel;
     }
@@ -65,19 +45,45 @@ public class Shop extends AbstractBaseEntity {
         this.tel = tel;
     }
 
-    public long getStartWorkTime() {
-        return startWorkTime;
+    public Address getAddress() {
+        return address;
     }
 
-    public void setStartWorkTime(long startWorkTime) {
-        this.startWorkTime = startWorkTime;
+    public void setAddress(Address address) {
+        this.address = address;
     }
 
-    public long getEndWorkTime() {
-        return endWorkTime;
+    public WorkTime getWorkTime() {
+        return workTime;
     }
 
-    public void setEndWorkTime(long endWorkTime) {
-        this.endWorkTime = endWorkTime;
+    public void setWorkTime(WorkTime workTime) {
+        this.workTime = workTime;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Shop shop = (Shop) o;
+        return tel == shop.tel &&
+                Objects.equals(name, shop.name) &&
+                Objects.equals(address, shop.address) &&
+                Objects.equals(workTime, shop.workTime);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, address, tel, workTime);
+    }
+
+    @Override
+    public String toString() {
+        return "Shop{" +
+                "name='" + name + '\'' +
+                ", address=" + address +
+                ", tel=" + tel +
+                ", workTime=" + workTime +
+                '}';
     }
 }

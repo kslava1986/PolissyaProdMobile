@@ -1,6 +1,6 @@
 package com.example.pp.rest.api;
 
-import com.example.pp.models.Shop;
+import com.example.pp._old._model.Shop;
 import com.example.pp.rest.ApiService;
 
 import java.util.List;

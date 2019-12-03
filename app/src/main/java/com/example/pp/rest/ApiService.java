@@ -1,8 +1,8 @@
 package com.example.pp.rest;
 
-import com.example.pp.models.Product;
-import com.example.pp.models.Shop;
-import com.example.pp.models.to.ProductTO;
+import com.example.pp._old._model.Product;
+import com.example.pp._old._model.Shop;
+import com.example.pp._old._model.to.ProductTO;
 
 import java.util.List;
 

@@ -6,8 +6,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.example.pp.data.AddressRepositoryLite;
-import com.example.pp.data.AppDBHelper;
-import com.example.pp.models._new.Address;
+import com.example.pp._old._data.AppDBHelper;
+import com.example.pp.models.Address;
 
 import static com.example.pp.data.imp.address.AddressContract.*;
 

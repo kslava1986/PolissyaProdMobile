@@ -27,17 +27,17 @@
 
 
         <activity
-            android:name=".DialogActivity"
+            android:name="._old.DialogActivity"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".ProductsSelectionActivity"
+            android:name="._old.ProductsSelectionActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".CityselectionActivity"
+            android:name="._old.CityselectionActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".MainActivity"
+            android:name="._old.MainActivity"
             android:screenOrientation="portrait">
         </activity>
     </application>

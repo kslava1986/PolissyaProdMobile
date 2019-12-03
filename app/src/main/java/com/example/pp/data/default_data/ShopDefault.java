@@ -1,8 +1,8 @@
 package com.example.pp.data.default_data;
 
-import com.example.pp.models._new.Address;
-import com.example.pp.models._new.Shop;
-import com.example.pp.models._new.WorkTime;
+import com.example.pp.models.Address;
+import com.example.pp.models.Shop;
+import com.example.pp.models.WorkTime;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -27,6 +27,7 @@ public class NetworkService {
         OkHttpClient.Builder client = new OkHttpClient.Builder()
                 .addInterceptor(interceptor);
 
+        //todo проверить как устанавливается URL в потоке
         Log.i("*********** URL: ", "Create with URL: " + URL);
 
         mRetrofit = new Retrofit.Builder()

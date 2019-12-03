@@ -1,42 +1,87 @@
 package com.example.pp.models;
 
-public class Shop {
-    private long id;
+import java.util.Objects;
+
+public class Shop extends AbstractBaseEntity {
+    //logo
     private String name;
-    private String tel;
+    private Address address;
+    private int tel;
+    private WorkTime workTime;
 
-    public Shop(int id, String name, String tel) {
-        this.id = id;
+    public Shop() {
+    }
+
+    public Shop(String name, Address address, int tel, WorkTime workTime) {
         this.name = name;
+        this.address = address;
         this.tel = tel;
+        this.workTime = workTime;
     }
 
-    public Shop(String name, String tel) {
+    public Shop(Integer id, String name, Address address, int tel, WorkTime workTime) {
+        super(id);
         this.name = name;
+        this.address = address;
         this.tel = tel;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setTel(String tel) {
-        this.tel = tel;
+        this.workTime = workTime;
     }
 
     public String getName() {
         return name;
     }
 
-    public String getTel() {
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getTel() {
         return tel;
+    }
+
+    public void setTel(int tel) {
+        this.tel = tel;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    public WorkTime getWorkTime() {
+        return workTime;
+    }
+
+    public void setWorkTime(WorkTime workTime) {
+        this.workTime = workTime;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Shop shop = (Shop) o;
+        return tel == shop.tel &&
+                Objects.equals(name, shop.name) &&
+                Objects.equals(address, shop.address) &&
+                Objects.equals(workTime, shop.workTime);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, address, tel, workTime);
+    }
+
+    @Override
+    public String toString() {
+        return "Shop{" +
+                "name='" + name + '\'' +
+                ", address=" + address +
+                ", tel=" + tel +
+                ", workTime=" + workTime +
+                '}';
     }
 }

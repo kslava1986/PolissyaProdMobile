@@ -5,9 +5,9 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.example.pp.data.AppDBHelper;
+import com.example.pp._old._data.AppDBHelper;
 import com.example.pp.data.WorkTimeRepositoryLite;
-import com.example.pp.models._new.WorkTime;
+import com.example.pp.models.WorkTime;
 
 import static com.example.pp.data.imp.worktime.WorkTimeContract.*;
 

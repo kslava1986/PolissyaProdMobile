@@ -4,9 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.example.pp.MainActivity;
+import com.example.pp._old.MainActivity;
 import com.example.pp.R;
-import com.example.pp.activity.controller.LoadControllerImp;
+import com.example.pp.activity.controller.imp.LoadControllerImp;
 
 import java.util.Objects;
 

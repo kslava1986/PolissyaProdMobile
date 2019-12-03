@@ -1,6 +1,8 @@
 package com.example.pp.rest;
 
-import com.example.pp.Services.ApiService;
+import android.util.Log;
+
+import com.example.pp.data.default_data.SettingDefault;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -9,8 +11,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class NetworkService {
     private static NetworkService mInstance;
+    private static String URL = SettingDefault.BASE_CONNECTION_URL;
     // office
-    private static final String BASE_URL = "http://213.108.47.244:9090";
+    //private static final String BASE_URL = "http://213.108.47.244:9090";
     // home
  //   private static final String BASE_URL = "http://109.251.205.79:9090";
 
@@ -19,13 +22,15 @@ public class NetworkService {
 
     private NetworkService() {
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
-        interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+        interceptor.level(HttpLoggingInterceptor.Level.BODY);
 
         OkHttpClient.Builder client = new OkHttpClient.Builder()
                 .addInterceptor(interceptor);
 
+        Log.i("*********** URL: ", "Create with URL: " + URL);
+
         mRetrofit = new Retrofit.Builder()
-                .baseUrl(BASE_URL)
+                .baseUrl(URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client.build())
                 .build();
@@ -38,7 +43,13 @@ public class NetworkService {
         return mInstance;
     }
 
-    public ApiService getJSONApi() {
-        return mRetrofit.create(ApiService.class);
+    public static void setUrl(String url){
+        Log.i("********** URL", "Old URL: " + URL);
+        URL = url;
+        Log.i("********** URL", "New URL: " + URL);
+    }
+
+    public <T extends ApiService> T getJSONApi(Class<T> service) {
+        return mRetrofit.create(service);
     }
 }

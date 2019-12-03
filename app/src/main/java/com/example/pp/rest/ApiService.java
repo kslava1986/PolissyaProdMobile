@@ -1,4 +1,4 @@
-package com.example.pp.Services;
+package com.example.pp.rest;
 
 import com.example.pp.models.Product;
 import com.example.pp.models.Shop;

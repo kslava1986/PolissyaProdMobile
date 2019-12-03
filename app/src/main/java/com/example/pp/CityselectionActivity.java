@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import com.example.pp.Services.ShopsService;
 import com.example.pp.models.Shop;
+import com.example.pp.rest.ApiService;
 import com.example.pp.rest.NetworkService;
 
 import java.util.List;
@@ -72,7 +73,7 @@ public class CityselectionActivity extends AppCompatActivity {
 
     private void loadData() {
         NetworkService.getInstance()
-                .getJSONApi()
+                .getJSONApi(ApiService.class)
                 .getShops()
                 .enqueue(new Callback<List<Shop>>() {
                     @Override

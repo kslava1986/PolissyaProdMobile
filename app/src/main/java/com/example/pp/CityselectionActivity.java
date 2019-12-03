@@ -33,7 +33,6 @@ public class CityselectionActivity extends AppCompatActivity {
         setContentView(R.layout.cityselection);
         Objects.requireNonNull(getSupportActionBar()).hide();
         // создаем объект для создания и управления версиями БД
-        // TODO: 19.09.2019 перемістити код у аплікейшн клас
 
         mShopService = new ShopsService(this);
 
@@ -48,7 +47,7 @@ public class CityselectionActivity extends AppCompatActivity {
                         Intent intent = new Intent(getApplicationContext(),DialogActivity.class);
                         intent.putExtra("address",textViewAddress.getText().toString());
                         intent.putExtra("tel",textViewTel.getText().toString());
-                        intent.putExtra("shopId", "566554564"); //todo
+                        intent.putExtra("shopId", "566554564");
                         //mShopService.getShopIdByPosition(); //або
                         //mShopService.getShop(position);
                         //mShopService.getAllItems().get(position).getId();

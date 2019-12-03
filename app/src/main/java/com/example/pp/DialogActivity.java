@@ -40,7 +40,7 @@ Button btnCallDialog, btnOrderDialog;
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),ProductsSelectionActivity.class);
-                intent.putExtra("shopId", "2"); //todo
+                intent.putExtra("shopId", "2");
                 startActivity(intent);
                 Toast toast = Toast.makeText(getApplicationContext(),
                         "Замовлення On-Line в розробці...", Toast.LENGTH_SHORT);

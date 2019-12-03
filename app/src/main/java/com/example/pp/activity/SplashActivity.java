@@ -6,6 +6,7 @@ import android.os.Handler;
 
 import com.example.pp.MainActivity;
 import com.example.pp.R;
+import com.example.pp.activity.controller.LoadControllerImp;
 
 import java.util.Objects;
 
@@ -13,6 +14,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SplashActivity extends AppCompatActivity {
+    private static final int DELAY = 2000;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -26,8 +28,9 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
         Objects.requireNonNull(getSupportActionBar()).hide();
 
+        runLoadData();
         //goNextActivity();
-        goNextActivityWithDelay(2000);
+        //goNextActivityWithDelay();
     }
 
     private void goNextActivity(){
@@ -35,7 +38,7 @@ public class SplashActivity extends AppCompatActivity {
         this.finish();
     }
 
-    private void goNextActivityWithDelay(int delay){
+    private void goNextActivityWithDelay(){
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -43,7 +46,16 @@ public class SplashActivity extends AppCompatActivity {
                 SplashActivity.this.startActivity(intent);
                 SplashActivity.this.finish();
             }
-        }, delay);
+        }, DELAY);
+    }
+
+    private void runLoadData(){
+        new Handler().post(new Runnable() {
+            @Override
+            public void run() {
+                new LoadControllerImp(getApplicationContext()).loadData();
+            }
+        });
     }
 
     @Override

@@ -11,6 +11,11 @@ public class Shop {
         this.tel = tel;
     }
 
+    public Shop(String name, String tel) {
+        this.name = name;
+        this.tel = tel;
+    }
+
     public long getId() {
         return id;
     }

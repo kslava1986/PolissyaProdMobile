@@ -2,15 +2,17 @@ package com.example.pp.activity.controller.imp;
 
 import android.content.Context;
 
-import com.example.pp.Services.SettingService;
-import com.example.pp._old._service.ShopsService;
-import com.example.pp.Services.imp.SettingServiceImp;
+import com.example.pp.data.default_data.ShopDefault;
+import com.example.pp.model.Shop;
+import com.example.pp.service.SettingService;
+import com.example.pp.service.ShopService;
+import com.example.pp.service.imp.SettingServiceImp;
 import com.example.pp.activity.controller.LoadingController;
 import com.example.pp.data.default_data.SettingDefault;
 import com.example.pp.data.imp.setting.SettingConst;
-import com.example.pp._old._model.Shop;
 import com.example.pp.rest.NetworkService;
 import com.example.pp.rest.api.ShopRestApi;
+import com.example.pp.service.imp.ShopServiceImp;
 
 import java.util.List;
 
@@ -21,13 +23,13 @@ import retrofit2.Response;
 
 public class LoadControllerImp implements LoadingController {
     private final SettingService settingService;
-    private final ShopsService shopsService;
+    private final ShopService shopService;
     private final NetworkService networkService;
 
 
     public LoadControllerImp(Context context) {
         this.settingService = new SettingServiceImp(context);
-        this.shopsService = new ShopsService(context);
+        this.shopService = new ShopServiceImp(context);
         this.networkService = createRestClient();
     }
 
@@ -41,21 +43,27 @@ public class LoadControllerImp implements LoadingController {
 
     @Override
     public void load() {
-        if(settingService.isExist(SettingConst.FIRST_RUN)){
+        /*if(settingService.isExist(SettingConst.FIRST_RUN)){
             createNewSettings();
             //todo добавить список значений по умолчанию для первой инициализации базы при первом запуске програмы
             //shopsService.saveToBaseData(ShopDefault.SHOPS);
         } else {
 
-        }
-        loadShops();
+        }*/
+
+        //todo убрать загрузку тестовых данных
+        //loadShops();
+        loadShopsDefault();
     }
 
     private void createNewSettings(){
         settingService.setValue(SettingConst.CONNECTION_URL, SettingDefault.BASE_CONNECTION_URL);
 
-
         settingService.setValue(SettingConst.FIRST_RUN, SettingDefault.FIRST_LOAD);
+    }
+
+    private void loadShopsDefault(){
+        shopService.saveAll(ShopDefault.SHOPS);
     }
 
     private void loadShops(){
@@ -64,10 +72,11 @@ public class LoadControllerImp implements LoadingController {
                 .getAll()
                 .enqueue(new Callback<List<Shop>>() {
                     @Override
-                    public void onResponse(@NonNull Call<List<Shop>> call, @NonNull Response<List<Shop>> response) {
+                    public void onResponse(@NonNull Call<List<Shop>> call,
+                                           @NonNull Response<List<Shop>> response) {
                         List<Shop> shops = response.body();
                         if(shops != null){
-                            shopsService.saveToBaseData(shops);
+                            //shopsService.saveToBaseData(shops);
                         }
                     }
 

@@ -17,6 +17,20 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets {
+        main {
+            res.srcDirs =
+                    [
+                            '/src/main/res/layouts/activity',
+                            '/src/main/res/layouts/fragment',
+                            '/src/main/res/layouts/adapter',
+                            '/src/main/res/layouts/item',
+                            '/src/main/res/layouts/other',
+                            '/src/main/res/layouts',
+                            '/src/main/res'
+                    ]
+        }
+    }
 }
 
 dependencies {
@@ -39,6 +53,3 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
     implementation 'com.squareup.okhttp3:logging-interceptor:4.2.1'
 }
-
-
-

@@ -2,10 +2,13 @@ package com.example.pp.activity.controller.imp;
 
 import android.content.Context;
 
+import com.example.pp.data.default_data.NewsDefault;
 import com.example.pp.data.default_data.ShopDefault;
 import com.example.pp.model.shop.Shop;
+import com.example.pp.service.NewsService;
 import com.example.pp.service.SettingService;
 import com.example.pp.service.ShopService;
+import com.example.pp.service.imp.NewsServiceImp;
 import com.example.pp.service.imp.SettingServiceImp;
 import com.example.pp.activity.controller.LoadingController;
 import com.example.pp.data.default_data.SettingDefault;
@@ -25,12 +28,14 @@ public class LoadControllerImp implements LoadingController {
     private final SettingService settingService;
     private final ShopService shopService;
     private final NetworkService networkService;
+    private final NewsService newsService;
 
 
     public LoadControllerImp(Context context) {
         this.settingService = new SettingServiceImp(context);
         this.shopService = new ShopServiceImp(context);
         this.networkService = createRestClient();
+        this.newsService = new NewsServiceImp(context);
     }
 
     private NetworkService createRestClient(){
@@ -53,7 +58,7 @@ public class LoadControllerImp implements LoadingController {
 
         //todo убрать загрузку тестовых данных
         //loadShops();
-        loadShopsDefault();
+        loadDefaultData();
     }
 
     private void createNewSettings(){
@@ -62,8 +67,9 @@ public class LoadControllerImp implements LoadingController {
         settingService.setValue(SettingConst.FIRST_RUN, SettingDefault.FIRST_LOAD);
     }
 
-    private void loadShopsDefault(){
+    private void loadDefaultData(){
         shopService.saveAll(ShopDefault.SHOPS);
+        newsService.saveAll(NewsDefault.NEWS);
     }
 
     private void loadShops(){

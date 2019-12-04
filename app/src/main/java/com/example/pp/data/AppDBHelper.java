@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 import com.example.pp.data.imp.address.AddressContract;
+import com.example.pp.data.imp.news.NewsContract;
 import com.example.pp.data.imp.setting.SettingContract;
 import com.example.pp.data.imp.worktime.WorkTimeContract;
 import com.example.pp.data.imp.shop.ShopContract;
@@ -14,7 +15,7 @@ import androidx.annotation.Nullable;
 
 public class AppDBHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "polissya.db";
-    private static final int DATABASE_VERSION = 6;
+    private static final int DATABASE_VERSION = 7;
 
     public AppDBHelper(@Nullable Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -26,6 +27,7 @@ public class AppDBHelper extends SQLiteOpenHelper {
         db.execSQL(AddressContract.SQL_CREATE_TABLE);
         db.execSQL(WorkTimeContract.SQL_CREATE_TABLE);
         db.execSQL(ShopContract.SQL_CREATE_TABLE);
+        db.execSQL(NewsContract.SQL_CREATE_TABLE);
     }
 
     @Override
@@ -34,6 +36,7 @@ public class AppDBHelper extends SQLiteOpenHelper {
         db.execSQL(AddressContract.SQL_DROP_TABLE);
         db.execSQL(WorkTimeContract.SQL_DROP_TABLE);
         db.execSQL(ShopContract.SQL_DROP_TABLE);
+        db.execSQL(NewsContract.SQL_DROP_TABLE);
 
         onCreate(db);
     }

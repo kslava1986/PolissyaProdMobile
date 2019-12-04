@@ -1,4 +1,4 @@
-package com.example.pp.data.imp;
+package com.example.pp.data.imp.shop;
 
 import android.content.ContentValues;
 import android.content.Context;

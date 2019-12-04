@@ -4,7 +4,7 @@ import android.content.Context;
 
 import com.example.pp.service.SettingService;
 import com.example.pp.data.SettingRepositoryLite;
-import com.example.pp.data.imp.SettingRepositoryLiteImp;
+import com.example.pp.data.imp.setting.SettingRepositoryLiteImp;
 import com.example.pp.model.setting.Setting;
 
 public class SettingServiceImp implements SettingService {

@@ -5,9 +5,9 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.example.pp._old._data.AppDBHelper;
+import com.example.pp.data.AppDBHelper;
 import com.example.pp.data.ShopRepositoryLite;
-import com.example.pp.models.Shop;
+import com.example.pp.model.Shop;
 
 import java.util.ArrayList;
 import java.util.List;

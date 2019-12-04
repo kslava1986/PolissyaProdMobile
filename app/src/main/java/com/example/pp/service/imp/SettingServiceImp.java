@@ -1,11 +1,11 @@
-package com.example.pp.Services.imp;
+package com.example.pp.service.imp;
 
 import android.content.Context;
 
-import com.example.pp.Services.SettingService;
+import com.example.pp.service.SettingService;
 import com.example.pp.data.SettingRepositoryLite;
 import com.example.pp.data.imp.SettingRepositoryLiteImp;
-import com.example.pp.models.Setting;
+import com.example.pp.model.Setting;
 
 public class SettingServiceImp implements SettingService {
     private SettingRepositoryLite repository;

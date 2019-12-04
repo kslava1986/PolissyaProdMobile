@@ -1,4 +1,4 @@
-package com.example.pp.Services;
+package com.example.pp.service;
 
 public interface SettingService {
     String getValue(String key);

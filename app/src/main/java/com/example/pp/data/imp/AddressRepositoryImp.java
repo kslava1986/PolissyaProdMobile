@@ -6,8 +6,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.example.pp.data.AddressRepositoryLite;
-import com.example.pp._old._data.AppDBHelper;
-import com.example.pp.models.Address;
+import com.example.pp.data.AppDBHelper;
+import com.example.pp.model.Address;
 
 import static com.example.pp.data.imp.address.AddressContract.*;
 
@@ -25,7 +25,7 @@ public class AddressRepositoryImp implements AddressRepositoryLite {
 
         ContentValues values = new ContentValues();
         values.put(NAME, address.getName());
-        values.put(INDEX, address.getIndex());
+        values.put(NUMBER, address.getNumber());
         values.put(ID_SHOP, address.getIdShop());
 
         db.insert(TABLE_NAME, null, values);
@@ -38,7 +38,7 @@ public class AddressRepositoryImp implements AddressRepositoryLite {
 
         ContentValues values = new ContentValues();
         values.put(NAME, address.getName());
-        values.put(INDEX, address.getIndex());
+        values.put(NUMBER, address.getNumber());
 
         db.update(TABLE_NAME, values, ID_SHOP,
                 new String[]{String.valueOf(address.getIdShop())});
@@ -67,12 +67,12 @@ public class AddressRepositoryImp implements AddressRepositoryLite {
                 null,
                 null)) {
             int indexName = cursor.getColumnIndex(NAME);
-            int indexIndex = cursor.getColumnIndex(INDEX);
+            int indexIndex = cursor.getColumnIndex(NUMBER);
 
             if (cursor.moveToNext()) {
                 Address address = new Address();
                 address.setName(cursor.getString(indexName));
-                address.setIndex(cursor.getInt(indexIndex));
+                address.setNumber(cursor.getInt(indexIndex));
                 address.setIdShop(idShop);
 
                 db.close();

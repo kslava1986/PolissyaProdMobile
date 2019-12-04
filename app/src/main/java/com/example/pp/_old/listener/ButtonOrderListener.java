@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.pp._old._model.to.ProductTO;
+import com.example.pp.rest.ApiService;
 import com.example.pp.rest.NetworkService;
 
 import java.util.List;
@@ -30,7 +31,7 @@ public class ButtonOrderListener implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         NetworkService.getInstance()
-                .getJSONApi()
+                .getJSONApi(ApiService.class)
                 .sendOrder(shopId,telCustomer,productTOList)
                 .enqueue(new Callback<String>() {
                     @Override

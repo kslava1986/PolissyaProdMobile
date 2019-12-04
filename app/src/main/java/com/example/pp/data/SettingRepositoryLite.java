@@ -1,6 +1,6 @@
 package com.example.pp.data;
 
-import com.example.pp.models.Setting;
+import com.example.pp.model.Setting;
 
 import java.util.List;
 

@@ -12,7 +12,7 @@ import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
 
-public interface ApiService {
+public interface ApiService extends ApiRestRequest{
     @GET("/shops")
     Call<List<Shop>> getShops();
 

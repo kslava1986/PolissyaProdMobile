@@ -1,4 +1,4 @@
-package com.example.pp.models;
+package com.example.pp.model;
 
 import java.util.Objects;
 

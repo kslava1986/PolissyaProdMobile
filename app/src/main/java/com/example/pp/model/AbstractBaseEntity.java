@@ -1,4 +1,4 @@
-package com.example.pp.models;
+package com.example.pp.model;
 
 public class AbstractBaseEntity {
     private Integer id;

@@ -50,7 +50,7 @@ public class NetworkService {
         Log.i("********** URL", "New URL: " + URL);
     }
 
-    public <T extends ApiService> T getJSONApi(Class<T> service) {
+    public <T extends ApiRestRequest> T getJSONApi(Class<T> service) {
         return mRetrofit.create(service);
     }
 }

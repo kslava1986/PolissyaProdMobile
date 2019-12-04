@@ -6,7 +6,7 @@ public class ShopContract {
     private ShopContract() {
     }
 
-    public final static String TABLE_NAME = "address";
+    public final static String TABLE_NAME = "shop";
 
     public final static String _ID = BaseColumns._ID;
     public final static String NAME = "name";

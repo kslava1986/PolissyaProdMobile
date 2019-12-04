@@ -1,18 +1,18 @@
-package com.example.pp.models;
+package com.example.pp.model;
 
 import java.util.Objects;
 
 public class Address {
     private String name;
-    private int index;
+    private int number;
     private int idShop;
 
     public Address() {
     }
 
-    public Address(String name, int index) {
+    public Address(String name, int number) {
         this.name = name;
-        this.index = index;
+        this.number = number;
     }
 
     public String getName() {
@@ -23,12 +23,12 @@ public class Address {
         this.name = name;
     }
 
-    public int getIndex() {
-        return index;
+    public int getNumber() {
+        return number;
     }
 
-    public void setIndex(int index) {
-        this.index = index;
+    public void setNumber(int number) {
+        this.number = number;
     }
 
     public int getIdShop() {
@@ -44,21 +44,21 @@ public class Address {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Address address = (Address) o;
-        return index == address.index &&
+        return number == address.number &&
                 idShop == address.idShop &&
                 Objects.equals(name, address.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, index, idShop);
+        return Objects.hash(name, number, idShop);
     }
 
     @Override
     public String toString() {
         return "Address{" +
                 "name='" + name + '\'' +
-                ", index=" + index +
+                ", number=" + number +
                 ", idShop=" + idShop +
                 '}';
     }

@@ -1,8 +1,8 @@
 package com.example.pp.data.default_data;
 
-import com.example.pp.models.Address;
-import com.example.pp.models.Shop;
-import com.example.pp.models.WorkTime;
+import com.example.pp.model.Address;
+import com.example.pp.model.Shop;
+import com.example.pp.model.WorkTime;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,8 +15,8 @@ public class ShopDefault {
 
     static {
         SHOPS.add(new Shop("shop_1",
-                new Address("Adress_name_1", 1),
-                12345,
+                new Address("adress_name_1", 1),
+                123456789,
                 new WorkTime(8, 0, 22, 0)));
         SHOPS.add(new Shop("shop_2",
                 new Address("adress_name_2", 2),

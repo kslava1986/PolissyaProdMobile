@@ -19,6 +19,7 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Objects.requireNonNull(getSupportActionBar()).hide();
         /*
             todo
             нарисовать активити-заставку
@@ -26,7 +27,6 @@ public class SplashActivity extends AppCompatActivity {
             - емуляция загрузки
          */
         setContentView(R.layout.activity_splash);
-        Objects.requireNonNull(getSupportActionBar()).hide();
 
         runLoadData();
         //goNextActivity();
@@ -42,6 +42,7 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
+                //todo fix next activity
                 Intent intent = new Intent(SplashActivity.this, MainActivity.class);
                 SplashActivity.this.startActivity(intent);
                 SplashActivity.this.finish();

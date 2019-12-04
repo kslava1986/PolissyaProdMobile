@@ -30,7 +30,7 @@ public class SplashActivity extends AppCompatActivity {
 
         runLoadData();
         //goNextActivity();
-        //goNextActivityWithDelay();
+        goNextActivityWithDelay();
     }
 
     private void goNextActivity(){
@@ -43,7 +43,7 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
                 //todo fix next activity
-                Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+                Intent intent = new Intent(SplashActivity.this, DashboardActivity.class);
                 SplashActivity.this.startActivity(intent);
                 SplashActivity.this.finish();
             }

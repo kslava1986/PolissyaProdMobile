@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#ffffcc" />
+    <corners android:radius="30dp" />
+    <padding/>
+    <gradient
+        android:type="linear"
+        android:startColor="@color/fon_start_card_news"
+        android:endColor="@color/fon_end_card_news"
+        android:angle="270" />
+    <stroke android:width="2dp"
+        android:color="@color/black"/>
+</shape>

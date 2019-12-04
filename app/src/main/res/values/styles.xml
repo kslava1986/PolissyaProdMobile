@@ -9,7 +9,7 @@
     </style>
 
     <style name="MainAppStyle">
-        <item name="android:background">@drawable/fon_gradient</item>
+        <item name="android:background">@drawable/fon_activity</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
     </style>

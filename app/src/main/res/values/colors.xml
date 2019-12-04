@@ -15,4 +15,11 @@
 
 
 
+
+    <color name="black">#000000</color>
+    <color name="light_black">#333333</color>
+    <color name="fon_start_activity">#ff9933</color>
+    <color name="fon_end_activity">#ff6633</color>
+    <color name="fon_start_card_news">#ffffcc</color>
+    <color name="fon_end_card_news">#ffcc99</color>
 </resources>

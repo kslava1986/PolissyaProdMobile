@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 import com.example.pp.data.AppDBHelper;
 import com.example.pp.data.SettingRepositoryLite;
-import com.example.pp.model.Setting;
+import com.example.pp.model.setting.Setting;
 
 import java.util.ArrayList;
 import java.util.List;

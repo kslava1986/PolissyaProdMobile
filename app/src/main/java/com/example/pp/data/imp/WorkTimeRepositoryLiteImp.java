@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 import com.example.pp.data.AppDBHelper;
 import com.example.pp.data.WorkTimeRepositoryLite;
-import com.example.pp.model.WorkTime;
+import com.example.pp.model.shop.WorkTime;
 
 import static com.example.pp.data.imp.worktime.WorkTimeContract.*;
 

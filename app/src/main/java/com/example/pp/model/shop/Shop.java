@@ -1,4 +1,6 @@
-package com.example.pp.model;
+package com.example.pp.model.shop;
+
+import com.example.pp.model.AbstractBaseEntity;
 
 import java.util.Objects;
 

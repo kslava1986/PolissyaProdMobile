@@ -1,6 +1,6 @@
 package com.example.pp.data;
 
-import com.example.pp.model.Address;
+import com.example.pp.model.shop.Address;
 
 public interface AddressRepositoryLite {
     void save(Address address);

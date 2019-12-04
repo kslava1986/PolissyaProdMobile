@@ -3,7 +3,7 @@ package com.example.pp.activity.controller.imp;
 import android.content.Context;
 
 import com.example.pp.data.default_data.ShopDefault;
-import com.example.pp.model.Shop;
+import com.example.pp.model.shop.Shop;
 import com.example.pp.service.SettingService;
 import com.example.pp.service.ShopService;
 import com.example.pp.service.imp.SettingServiceImp;

@@ -8,9 +8,9 @@ import com.example.pp.data.WorkTimeRepositoryLite;
 import com.example.pp.data.imp.AddressRepositoryImp;
 import com.example.pp.data.imp.ShopRepositoryLiteImp;
 import com.example.pp.data.imp.WorkTimeRepositoryLiteImp;
-import com.example.pp.model.Address;
-import com.example.pp.model.Shop;
-import com.example.pp.model.WorkTime;
+import com.example.pp.model.shop.Address;
+import com.example.pp.model.shop.Shop;
+import com.example.pp.model.shop.WorkTime;
 import com.example.pp.service.ShopService;
 
 import java.util.List;

@@ -1,6 +1,6 @@
 package com.example.pp.data;
 
-import com.example.pp.model.Shop;
+import com.example.pp.model.shop.Shop;
 
 import java.util.List;
 

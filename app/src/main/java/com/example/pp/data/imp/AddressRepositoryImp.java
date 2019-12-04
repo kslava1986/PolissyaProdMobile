@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 import com.example.pp.data.AddressRepositoryLite;
 import com.example.pp.data.AppDBHelper;
-import com.example.pp.model.Address;
+import com.example.pp.model.shop.Address;
 
 import static com.example.pp.data.imp.address.AddressContract.*;
 

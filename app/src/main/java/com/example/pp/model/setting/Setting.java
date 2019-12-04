@@ -1,4 +1,6 @@
-package com.example.pp.model;
+package com.example.pp.model.setting;
+
+import com.example.pp.model.AbstractBaseEntity;
 
 public class Setting extends AbstractBaseEntity {
     private String key;

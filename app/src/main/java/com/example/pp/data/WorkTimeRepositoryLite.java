@@ -1,6 +1,6 @@
 package com.example.pp.data;
 
-import com.example.pp.model.WorkTime;
+import com.example.pp.model.shop.WorkTime;
 
 public interface WorkTimeRepositoryLite {
     void save(WorkTime workTime);

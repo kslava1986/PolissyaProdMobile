@@ -31,7 +31,7 @@
 
     <fragment
         android:id="@+id/dashboard_fr_recycle"
-        android:name="com.example.pp.fragment.RecyclerviewFragment"
+        android:name="com.example.pp.activity.fragment.RecyclerviewFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="20dp"

@@ -6,28 +6,8 @@
     android:layout_height="match_parent"
     style="@style/MainAppStyle">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/Blue">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="8"
-            android:layout_height="wrap_content"
-            android:textSize="30sp"
-            android:textColor="@color/White"
-            android:text="Search"/>
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="2"
-            android:layout_height="wrap_content"
-            android:textSize="30sp"
-            android:textColor="@color/White"
-            android:text="Menu" />
-
-    </LinearLayout>
+    <include
+        layout="@layout/app_bar"/>
 
     <fragment
         android:id="@+id/dashboard_fr_recycle"

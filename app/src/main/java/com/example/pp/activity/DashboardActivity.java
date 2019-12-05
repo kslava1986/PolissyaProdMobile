@@ -16,6 +16,7 @@ import java.util.Objects;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class DashboardActivity extends AppCompatActivity implements OnSelectItemRecyclerView<News> {
@@ -26,7 +27,10 @@ public class DashboardActivity extends AppCompatActivity implements OnSelectItem
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
-        Objects.requireNonNull(getSupportActionBar()).hide();
+        //Objects.requireNonNull(getSupportActionBar()).hide();
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitle("Search");
+        setSupportActionBar(toolbar);
 
         newsService = new NewsServiceImp(this);
 

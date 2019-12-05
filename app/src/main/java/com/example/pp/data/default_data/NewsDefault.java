@@ -20,7 +20,32 @@ public class NewsDefault {
                 "Some text for news-3Some text for news-3Some text for news-3" +
                         "Some text for news-3Some text for news-3",
                 new Date()));
-        NEWS.add(new News("News-4", "Some text for news-4", new Date()));
+        NEWS.add(new News("News-4News-4News-4News-4News-4News-4News-4News-4News-4" +
+                "News-4News-4News-4News-4News-4", "Some text for news-4Some text for" +
+                "Some text for news-4Some text for news-4Some text for news-4Some text for news-4" +
+                "Some text for news-4Some text for news-4Some text for news-4Some text for news-4" +
+                "Some text for news-4Some text for news-4Some text for news-4Some text for news-4" +
+                "Some text for news-4Some text for news-4Some text for news-4Some text for news-4" +
+                "Some text for news-4Some text for news-4Some text for news-4Some text for news-4" +
+                "Some text for news-4Some text for news-4Some text for news-4Some text for news-4" +
+                "Some text for news-4Some text for news-4Some text for news-4Some text for news-4" +
+                "Some text for news-4Some text for news-4Some text for news-4Some text for news-4" +
+                "Some text for news-4Some text for news-4Some text for news-4Some text for news-4" +
+                "Some text for news-4Some text for news-4Some text for news-4Some text for news-4" +
+                "Some text for news-4Some text for news-4Some text for news-4Some text for news-4" +
+                "Some text for news-4Some text for news-4Some text for news-4Some text for news-4" +
+                "Some text for news-4Some text for news-4Some text for news-4Some text for news-4" +
+                "Some text for news-4Some text for news-4Some text for news-4Some text for news-4" +
+                "Some text for news-4Some text for news-4Some text for news-4Some text for news-4" +
+                "Some text for news-4Some text for news-4Some text for news-4Some text for news-4" +
+                "Some text for news-4Some text for news-4Some text for news-4Some text for news-4" +
+                "Some text for news-4Some text for news-4Some text for news-4Some text for news-4" +
+                "Some text for news-4Some text for news-4Some text for news-4Some text for news-4" +
+                "Some text for news-4Some text for news-4Some text for news-4Some text for news-4" +
+                "Some text for news-4Some text for news-4Some text for news-4Some text for news-4" +
+                "Some text for news-4Some text for news-4Some text for news-4Some text for news-4" +
+                "Some text for news-4Some text for news-4Some text for news-4Some text for news-4" +
+                "Some text for news-4Some text for news-4Some text for news-4", new Date()));
         NEWS.add(new News("News-5",
                 "Some text for news-5Some text for news-5Some text for news-5" +
                         "Some text for news-5Some text for news-5Some text for news-5" +

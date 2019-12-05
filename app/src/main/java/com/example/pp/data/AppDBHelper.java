@@ -3,7 +3,6 @@ package com.example.pp.data;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
 
 import com.example.pp.data.imp.address.AddressContract;
 import com.example.pp.data.imp.news.NewsContract;
@@ -15,7 +14,7 @@ import androidx.annotation.Nullable;
 
 public class AppDBHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "polissya.db";
-    private static final int DATABASE_VERSION = 7;
+    private static final int DATABASE_VERSION = 8;
 
     public AppDBHelper(@Nullable Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);

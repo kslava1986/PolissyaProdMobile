@@ -1,4 +1,4 @@
-package com.example.pp.activity.fragment.communication;
+package com.example.pp.activity.communication;
 
 public interface OnSelectItemRecyclerView<T> {
     void selectItem(T obj);

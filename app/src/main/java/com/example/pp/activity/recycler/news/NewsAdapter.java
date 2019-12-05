@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.pp.R;
-import com.example.pp.activity.fragment.communication.OnSelectItemRecyclerView;
+import com.example.pp.activity.communication.OnSelectItemRecyclerView;
 import com.example.pp.model.news.News;
 
 import java.util.List;

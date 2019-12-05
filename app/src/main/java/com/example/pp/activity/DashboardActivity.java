@@ -3,7 +3,8 @@ package com.example.pp.activity;
 import android.os.Bundle;
 
 import com.example.pp.R;
-import com.example.pp.activity.fragment.communication.OnSelectItemRecyclerView;
+import com.example.pp.activity.dialog.ShowNewsDialog;
+import com.example.pp.activity.communication.OnSelectItemRecyclerView;
 import com.example.pp.activity.recycler.RecyclerUtil;
 import com.example.pp.activity.recycler.news.NewsAdapter;
 import com.example.pp.model.news.News;
@@ -41,7 +42,7 @@ public class DashboardActivity extends AppCompatActivity implements OnSelectItem
                 + "id: " + obj.getId()
                 + "\ntitle: " + obj.getTitle());
 
-
-
+        ShowNewsDialog dialog = new ShowNewsDialog(obj);
+        dialog.show(getSupportFragmentManager(), "news");
     }
 }

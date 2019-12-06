@@ -40,7 +40,6 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
                 //todo fix next activity
-                //Intent intent = new Intent(SplashActivity.this, DashboardActivity.class);
                 Intent intent = new Intent(SplashActivity.this, MainActivity.class);
                 SplashActivity.this.startActivity(intent);
                 SplashActivity.this.finish();

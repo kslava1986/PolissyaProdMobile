@@ -4,11 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.example.pp._old.MainActivity;
 import com.example.pp.R;
 import com.example.pp.activity.controller.imp.LoadControllerImp;
-
-import java.util.Objects;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -43,7 +40,8 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
                 //todo fix next activity
-                Intent intent = new Intent(SplashActivity.this, DashboardActivity.class);
+                //Intent intent = new Intent(SplashActivity.this, DashboardActivity.class);
+                Intent intent = new Intent(SplashActivity.this, MainActivity.class);
                 SplashActivity.this.startActivity(intent);
                 SplashActivity.this.finish();
             }

@@ -1,6 +1,7 @@
 package com.example.pp.activity;
 
 import android.os.Bundle;
+import android.view.Menu;
 
 import com.example.pp.R;
 import com.example.pp.activity.dialog.ShowNewsDialog;
@@ -29,7 +30,6 @@ public class DashboardActivity extends AppCompatActivity implements OnSelectItem
         setContentView(R.layout.activity_dashboard);
         //Objects.requireNonNull(getSupportActionBar()).hide();
         Toolbar toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle("Search");
         setSupportActionBar(toolbar);
 
         newsService = new NewsServiceImp(this);
@@ -48,5 +48,13 @@ public class DashboardActivity extends AppCompatActivity implements OnSelectItem
 
         ShowNewsDialog dialog = new ShowNewsDialog(obj);
         dialog.show(getSupportFragmentManager(), "news");
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        //todo управление поведением меню
+        // https://habr.com/ru/post/256643/
+        getMenuInflater().inflate(R.menu.toolbar_menu, menu);
+        return true;
     }
 }

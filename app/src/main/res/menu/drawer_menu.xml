@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/drawer_menu_profile"
+            android:title="Profile"/>
+
+    </group>
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/newsFragment"
+            android:title="News"/>
+    </group>
+
+    <item android:title="Order">
+        <menu>
+            <item
+                android:id="@+id/orderPhoneFragment"
+                android:title="on phone" />
+            <item
+                android:id="@+id/orderOnlineFragment"
+                android:title="on-line" />
+        </menu>
+    </item>
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:title=""
+            android:menuCategory="secondary">
+            <item
+                android:id="@+id/drawer_menu_info"
+                android:title="Info"/>
+        </item>
+    </group>
+</menu>
